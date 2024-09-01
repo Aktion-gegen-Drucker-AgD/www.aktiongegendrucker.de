@@ -1,0 +1,17 @@
+{
+    "build": { "dockerfile": "./Dockerfile.dev.deno" },
+    "forwardPorts": [8081],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "denoland.vscode-deno",
+            "mhutchie.git-graph",
+            "ms-azuretools.vscode-docker",
+            "vivaxy.vscode-conventional-commits",
+            "github.vscode-github-actions",
+            "hediet.vscode-drawio"
+        ]
+      }
+    },
+    "runArgs": ["--network", "host"]
+  }
