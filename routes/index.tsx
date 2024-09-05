@@ -13,7 +13,7 @@ function HeroBanner() {
             <input type="checkbox" required /> Die{" "}
             <a href="#">Datenschutzhinweise</a> habe ich gelesen und stimme zu
           </label>
-          <button type="submit">AgD-Infobrief Abonnieren</button>
+          <button class="red-button" type="submit">AgD-Infobrief Abonnieren</button>
         </form>
       </div>
     </section>
@@ -23,9 +23,9 @@ function HeroBanner() {
 function ButtonRow() {
   return (
     <div class="button-row">
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
+      <button class="red-button">Button 1</button>
+      <button class="red-button">Button 2</button>
+      <button class="red-button">Button 3</button>
     </div>
   );
 }
@@ -67,9 +67,12 @@ export default function Home() {
     <main>
       <HeroBanner />
 
-      {/* <ButtonRow /> */}
+      <ButtonRow />
 
-      {/* <InfoSection /> */}
+      {/* <InfoSection />
+      <InfoSection />
+      <InfoSection />
+      <InfoSection /> */}
     </main>
   );
 }

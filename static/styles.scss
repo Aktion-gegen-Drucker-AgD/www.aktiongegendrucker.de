@@ -106,34 +106,19 @@ header {
   border-radius: 5px;
 
   input[type="email"] {
-    padding: 10px;
+    border-radius: 5px;
     margin-right: 10px;
   }
 
   button {
-    padding: 10px 20px;
-    background-color: #d30c0f;
-    color: white;
-    border: none;
-    cursor: pointer;
+    @media (max-width: 768px) { /* Anpassung für Bildschirme mit max. 768px Breite */
+      flex-direction: column; /* Stellt sicher, dass die Buttons untereinander angeordnet sind */
+      margin-left: 0;
+      margin-right: 0;
+    }  
   }
 }
 
-/* Actions Section */
-.actions {
-  text-align: center;
-  margin: 20px 0;
-
-  button {
-    background-color: #d30c0f;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-}
 
 /* Leaders Section */
 .leaders {
@@ -158,27 +143,41 @@ header {
 
 .button-row {
   display: flex;
+  flex-wrap: wrap; /* Ermöglicht das Umwickeln der Buttons auf kleineren Bildschirmen */
   justify-content: space-between; 
   margin-left: 25%; 
   margin-right: 25%;
   margin-top: 20px;
 
   button {
-    flex: 1; 
-    margin: 0 100px; 
-    background-color: #d50f20; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    padding: 10px 20px;
-    font-size: 16px;
-    height: 55px;
-    font-size: 18px;
-    text-transform: uppercase;
+    flex: 1 1 auto; /* Ermöglicht den Buttons, sich gleichmäßig anzupassen */
+    margin-left: 50px; 
+    margin-right: 50px;
+  }
+  
+  @media (max-width: 768px) { /* Anpassung für Bildschirme mit max. 768px Breite */
+    flex-direction: column; /* Stellt sicher, dass die Buttons untereinander angeordnet sind */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}
 
-    &:hover {
-      background-color: darkred;
-    }
+.red-button {
+  flex: 1; 
+  margin: 0 100px; 
+  background-color: #d50f20; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  height: 55px;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darkred;
   }
 }
 
@@ -187,5 +186,18 @@ header {
   background-color: $navbar-bg-color; 
   .navbar-toggler-icon {
     background-image: none;
+  }
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #003B63; /* Hintergrundfarbe für den Footer */
+  padding: 20px 0; /* Abstand im Footer */
+  
+  .container {
+    text-align: center;
+    color: #fff;
   }
 }
