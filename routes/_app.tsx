@@ -1,6 +1,7 @@
 import { type PageProps } from "$fresh/server.ts";
 import { Header } from "../components/Header.tsx";
 import { Footer } from "../components/Footer.tsx";
+import { Cookies } from "../components/Cookies.tsx";
 export default function App({ Component }: PageProps) {
   return (
     <html>
@@ -15,6 +16,7 @@ export default function App({ Component }: PageProps) {
       <body>
         <Header />
         <Component />
+        <Cookies />
         <Footer />
       </body>
     </html>
