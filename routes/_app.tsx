@@ -7,7 +7,7 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>www.test</title>
+        <title>AgD - Aktion gegen Drucker</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
         <script src="/bootstrap/js/bootstrap.bundle.js"></script>
