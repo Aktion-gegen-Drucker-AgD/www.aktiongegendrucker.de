@@ -9,7 +9,10 @@
             "ms-azuretools.vscode-docker",
             "vivaxy.vscode-conventional-commits",
             "github.vscode-github-actions",
-            "hediet.vscode-drawio"
+            "hediet.vscode-drawio",
+            "sibiraj-s.vscode-scss-formatter",
+            "gencer.html-slim-scss-css-class-completion",
+            "yutent.scss-to-css"
         ]
       }
     },

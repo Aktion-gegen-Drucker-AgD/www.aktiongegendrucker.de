@@ -3,4 +3,4 @@ FROM denoland/deno:latest
 COPY . /app/
 WORKDIR /app
 
-CMD [ "run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "--allow-run", "server.ts" ]
+CMD [ "run", "task", "start" ]
