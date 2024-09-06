@@ -150,12 +150,18 @@ header {
       margin: 0 10px;
       text-align: center;
 
+      .title {
+        font-weight: bold;
+        text-align: left;
+      }
+
       img {
         width: 100%;
         height: auto;
       }
 
       p {
+        text-align: justify;
         margin-top: 10px;
       }
     }
