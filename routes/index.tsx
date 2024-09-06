@@ -79,13 +79,6 @@ export default function Home() {
       <ButtonRow />
 
       <InfoSection />
-
-      {
-        /* <InfoSection />
-      <InfoSection />
-      <InfoSection />
-      <InfoSection /> */
-      }
     </main>
   );
 }
