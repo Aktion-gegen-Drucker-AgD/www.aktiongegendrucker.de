@@ -2,7 +2,7 @@ function HeroBanner() {
 
   return (
     <section class="hero">
-      <img src="/images/index_bg_top.png" alt="Landscape Image" />
+      <img src="/images/kremlin-3393439_1920.jpg" alt="Landscape Image" />
       <div class="newsletter">
         <form>
           <input
@@ -26,9 +26,9 @@ function HeroBanner() {
 function ButtonRow() {
   return (
     <div class="button-row">
-      <button class="red-button">Mitglied Werden!</button>
-      <button class="red-button">Jetzt Spenden!</button>
-      <button class="red-button">Infobrief Erhalten!</button>
+      <a href="https://discord.gg/JZpNRYYTD6"><button class="red-button">Mitglied Werden!</button></a>
+      <a href="https://discord.gg/JZpNRYYTD6"><button class="red-button">Jetzt Unterstützen!</button></a>
+      <a href="https://discord.gg/JZpNRYYTD6"><button class="red-button">Infobrief Erhalten!</button></a>
     </div>
   );
 }
