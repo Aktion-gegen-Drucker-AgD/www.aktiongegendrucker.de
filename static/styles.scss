@@ -223,3 +223,46 @@ header {
     color: #fff;
   }
 }
+
+// Variables
+$banner-bg-color: rgba(237, 237, 237, 0.9);
+$button-bg-color: #d50f20;
+$button-hover-color: darkred;
+$button-text-color: white;
+$text-color: black;
+
+// Cookie Banner Styling
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $banner-bg-color;
+    color: $text-color;
+    padding: 8px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    #cookie-btn {
+        background-color: $button-bg-color;
+        color: $button-text-color;
+        border: none;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: $button-hover-color;
+        }
+    }
+}
