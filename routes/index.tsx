@@ -26,9 +26,9 @@ function HeroBanner() {
 function ButtonRow() {
   return (
     <div class="button-row">
-      <button class="red-button">Join Discord</button>
-      <button class="red-button">Join Discord</button>
-      <button class="red-button">Join Discord</button>
+      <button class="red-button">Mitglied Werden!</button>
+      <button class="red-button">Jetzt Spenden!</button>
+      <button class="red-button">Infobrief Erhalten!</button>
     </div>
   );
 }
