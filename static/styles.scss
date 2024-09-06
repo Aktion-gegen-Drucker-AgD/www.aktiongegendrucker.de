@@ -46,30 +46,32 @@ header {
 
     nav {
       // Stil für die Liste
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
+      div {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
 
-        // Stil für die Listenelemente
-        li {
-          margin-right: $spacing;
-          margin-left: $spacing;
+          // Stil für die Listenelemente
+          li {
+            margin-right: $spacing;
+            margin-left: $spacing;
 
-          // Stil für die Links
-          a {
-            display: block;
-            color: $link-color;
-            transition: color 0.5s ease;
-            text-align: center;
-            text-decoration: none;
-            font-size: 19px;
-            text-transform: uppercase;
+            // Stil für die Links
+            a {
+              display: block;
+              color: $link-color;
+              transition: color 0.5s ease;
+              text-align: center;
+              text-decoration: none;
+              font-size: 19px;
+              text-transform: uppercase;
 
-            // Hover-Effekt
-            &:hover {
-              color: $link-hover-bg;
+              // Hover-Effekt
+              &:hover {
+                color: $link-hover-bg;
+              }
             }
           }
         }
@@ -82,12 +84,15 @@ header {
 .hero {
   position: relative;
   text-align: center;
+  height: 562px; 
+  overflow: hidden;
 
   img {
     width: 100%;
     height: 562px;
-    object-fit: cover; /* Bild wird so skaliert, dass es passt, aber ggf. zugeschnitten */
-    object-position: center; /* Zentrum des Bildes bleibt im Fokus */
+    object-fit: cover; 
+    object-position: center;
+    display: block;
   }
 }
 
@@ -142,9 +147,8 @@ header {
   text-align: center;
 
   img {
-    width: 150px;
+    width: auto;
     height: auto;
-    border-radius: 50%;
   }
 
   p {
@@ -154,20 +158,20 @@ header {
 
 .button-row {
   display: flex;
-  justify-content: space-between; /* Verteilt die Buttons gleichmäßig */
-  margin-left: 200px; /* Abstand links und rechts vom Container */
-  margin-right: 200px;
+  justify-content: space-between; 
+  margin-left: 25%; 
+  margin-right: 25%;
   margin-top: 20px;
 
   button {
-    flex: 1; /* Lässt alle Buttons gleichmäßig wachsen */
-    margin: 0 100px; /* Abstände zwischen den Buttons */
-    background-color: #d50f20; /* Roter Hintergrund */
-    color: white; /* Weiße Schrift */
-    border: none; /* Entfernt den Standardrahmen */
-    border-radius: 5px; /* Runde Kanten (25px) */
-    padding: 10px 20px; /* Innenabstand für bessere Lesbarkeit */
-    font-size: 16px; /* Schriftgröße */
+    flex: 1; 
+    margin: 0 100px; 
+    background-color: #d50f20; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    font-size: 16px;
     height: 55px;
     font-size: 18px;
     text-transform: uppercase;
@@ -175,5 +179,13 @@ header {
     &:hover {
       background-color: darkred;
     }
+  }
+}
+
+.navbar-toggler {
+  border: 1px solid #fff; 
+  background-color: $navbar-bg-color; 
+  .navbar-toggler-icon {
+    background-image: none;
   }
 }
