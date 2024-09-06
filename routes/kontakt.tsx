@@ -12,8 +12,7 @@ export default function Kontakt() {
                         src="/images/putin-on-a-bear.jpg"
                         alt="Berliiiiin"
                         style="width: 100%;object-fit: cover;object-position: center;display: block;"
-                    >
-                    </img>
+                    />
                 </div>
             </div>
         </>

@@ -21,7 +21,7 @@ export function Header() {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#home">Home</a>
+                                <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#services">Services</a>
@@ -30,7 +30,7 @@ export function Header() {
                                 <a class="nav-link" href="#about">Über uns</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">Kontakt</a>
+                                <a class="nav-link" href="/kontakt">Kontakt</a>
                             </li>
                         </ul>
                     </div>
