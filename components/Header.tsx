@@ -23,11 +23,11 @@ export function Header() {
                         <li>
                             <a href="#contact">Kontakt</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="#">
                                 <img src="search-icon.png" alt="Search" />
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </div>
