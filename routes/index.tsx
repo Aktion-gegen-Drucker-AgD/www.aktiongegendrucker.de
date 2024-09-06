@@ -13,7 +13,9 @@ function HeroBanner() {
             <input type="checkbox" required /> Die{" "}
             <a href="#">Datenschutzhinweise</a> habe ich gelesen und stimme zu
           </label>
-          <button class="red-button" type="submit">AgD-Infobrief Abonnieren</button>
+          <button class="red-button" type="submit">
+            AgD-Infobrief Abonnieren
+          </button>
         </form>
       </div>
     </section>
@@ -31,15 +33,15 @@ function ButtonRow() {
 }
 
 function InfoSection() {
-  interface LeaderProps {
+  interface InfoProps {
     imageSrc: string;
     altText: string;
     description: string;
   }
 
-  const Leader = ({ imageSrc, altText, description }: LeaderProps) => {
+  const Info = ({ imageSrc, altText, description }: InfoProps) => {
     return (
-      <div className="leader">
+      <div class="info">
         <img src={imageSrc} alt={altText} />
         <p>{description}</p>
       </div>
@@ -47,18 +49,20 @@ function InfoSection() {
   };
 
   return (
-    <section class="leaders">
-      <Leader
-        imageSrc="/images/leader_right.png"
-        altText=""
-        description="ye"
-      />
-      <Leader
-        imageSrc="/images/leader_right.png"
-        altText=""
-        description="ye"
-      />
-    </section>
+    <div class="info-container">
+      <div class="infos">
+        <Info
+          imageSrc="/images/leader_right.png"
+          altText=""
+          description="ye"
+        />
+        <Info
+          imageSrc="/images/leader_right.png"
+          altText=""
+          description="ye"
+        />
+      </div>
+    </div>
   );
 }
 
@@ -69,10 +73,14 @@ export default function Home() {
 
       <ButtonRow />
 
-      {/* <InfoSection />
+      <InfoSection />
+
+      {
+        /* <InfoSection />
       <InfoSection />
       <InfoSection />
-      <InfoSection /> */}
+      <InfoSection /> */
+      }
     </main>
   );
 }

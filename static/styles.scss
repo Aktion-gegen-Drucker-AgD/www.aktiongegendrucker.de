@@ -110,9 +110,15 @@ header {
     margin-right: 10px;
   }
 
+  form {
+    display: flex;
+    flex-direction: column; /* Elemente untereinander anordnen */
+    gap: 15px; /* Abstand zwischen den Elementen */
+  }
+
   button {
-    @media (max-width: 768px) { /* Anpassung für Bildschirme mit max. 768px Breite */
-      flex-direction: column; /* Stellt sicher, dass die Buttons untereinander angeordnet sind */
+    @media (max-width: 768px) {
+      flex-direction: column; 
       margin-left: 0;
       margin-right: 0;
     }  
@@ -120,26 +126,43 @@ header {
 }
 
 
-/* Leaders Section */
-.leaders {
+/* infos Section */
+
+.info-container {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  margin-top: 80px;
+
+  .infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+    width: 70%;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      margin: 0px;
+      width: 100%;
+    }  
+
+    .info {
+      margin: 0 10px;
+      text-align: center;
+    
+      img {
+        width: 100%;
+        height: auto;
+      }
+    
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
-.leader {
-  margin: 0 10px;
-  text-align: center;
-
-  img {
-    width: auto;
-    height: auto;
-  }
-
-  p {
-    margin-top: 10px;
-  }
-}
 
 .button-row {
   display: flex;
@@ -147,7 +170,7 @@ header {
   justify-content: space-between; 
   margin-left: 25%; 
   margin-right: 25%;
-  margin-top: 20px;
+  margin-top: 50px;
 
   button {
     flex: 1 1 auto; /* Ermöglicht den Buttons, sich gleichmäßig anzupassen */
@@ -165,7 +188,7 @@ header {
 
 .red-button {
   flex: 1; 
-  margin: 0 100px; 
+  margin: 20px 100px; 
   background-color: #d50f20; 
   color: white; 
   border: none; 
