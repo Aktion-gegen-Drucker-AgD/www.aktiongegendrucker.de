@@ -2,7 +2,7 @@ export function Header() {
     return (
         <header>
             <div class="main">
-                <a href="#home" class="logo">
+                <a href="/" class="logo">
                     <img src="/images/agd-logo.png" alt="Logo" />
                 </a>
 
@@ -22,12 +22,6 @@ export function Header() {
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#services">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">Über uns</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/kontakt">Kontakt</a>
