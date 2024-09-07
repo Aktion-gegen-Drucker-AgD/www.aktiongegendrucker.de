@@ -4,7 +4,7 @@ function HeroBanner() {
   return (
     <section class="hero">
       <img src="/images/kremlin-3393439_1920.jpg" alt="Landscape Image" />
-      <div class="newsletter">
+      <div class="newsletter" style="display:none">
         <form>
           <input
             type="email"
@@ -28,9 +28,9 @@ function ButtonRow() {
   return (
     <div class="center-container">
       <div class="button-row">
-        <ButtonLink text="Mitglied Werden!" url="" />
-        <ButtonLink text="Jetzt Unterstützen!" url="" />
-        <ButtonLink text="Infobrief Erhalten!" url="" />
+        <ButtonLink text="Mitglied Werden!" url="https://discord.gg/JZpNRYYTD6" />
+        <ButtonLink text="Jetzt Unterstützen!" url="https://discord.gg/JZpNRYYTD6" />
+        <ButtonLink text="Infobrief Erhalten!" url="https://discord.gg/JZpNRYYTD6" />
       </div>
     </div>
   );
