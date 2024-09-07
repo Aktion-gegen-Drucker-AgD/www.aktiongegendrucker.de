@@ -28,9 +28,18 @@ function ButtonRow() {
   return (
     <div class="center-container">
       <div class="button-row">
-        <ButtonLink text="Mitglied Werden!" url="https://discord.gg/JZpNRYYTD6" />
-        <ButtonLink text="Jetzt Unterstützen!" url="https://discord.gg/JZpNRYYTD6" />
-        <ButtonLink text="Infobrief Erhalten!" url="https://discord.gg/JZpNRYYTD6" />
+        <ButtonLink
+          text="Mitglied Werden!"
+          url="https://discord.gg/JZpNRYYTD6"
+        />
+        <ButtonLink
+          text="Jetzt Unterstützen!"
+          url="https://discord.gg/JZpNRYYTD6"
+        />
+        <ButtonLink
+          text="Infobrief Erhalten!"
+          url="https://discord.gg/JZpNRYYTD6"
+        />
       </div>
     </div>
   );
@@ -88,6 +97,12 @@ function InfoSectionSmall() {
   return (
     <div class="info-container">
       <div class="infos-small">
+        <Info
+          imageSrc="/images/wahl/0.png"
+          altText=""
+          title=""
+          description=""
+        />
         <Info
           imageSrc="/images/wahl/1.png"
           altText=""
