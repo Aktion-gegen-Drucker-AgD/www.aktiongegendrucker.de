@@ -18,9 +18,11 @@ $link-hover-bg: #111;
 $logo-height: 120px;
 $link-padding: 14px 16px;
 $spacing: 20px;
+$main-width: 1240px;
 
 // Grundstil für die Navigation
-header {
+header,
+.blue-banner {
   background-color: $navbar-bg-color;
   padding: 30px;
   height: 140px;
@@ -28,8 +30,22 @@ header {
   display: flex;
   justify-content: center;
 
+  .blue-banner_title {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 7vw; /* Passt die Schriftgröße relativ zur Bildschirmbreite an */
+    display: block; /* Falls der Text als Block dargestellt werden soll */
+    text-align: center; /* Zentriert den Text innerhalb des a-Elements */
+
+    @media (min-width: 690px) {
+      font-size: 60px; /* Fixiere die Schriftgröße bei größeren Bildschirmen */
+    }
+  }
+
   .main {
-    width: 1240px;
+    width: $main-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,8 +127,8 @@ header {
 
   form {
     display: flex;
-    flex-direction: column; /* Elemente untereinander anordnen */
-    gap: 15px; /* Abstand zwischen den Elementen */
+    flex-direction: column;
+    gap: 15px;
   }
 
   button {
@@ -131,13 +147,26 @@ header {
   justify-content: center;
   margin-top: 80px;
 
+  .infos-main {
+    grid-template-columns: 1fr;
+  }
+
   .infos {
-    display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .infos-small {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .infos,
+  .infos-small,
+  .infos-main {
+    display: grid;
     gap: 10px;
     justify-content: center;
     margin: 20px;
-    width: 70%;
+    width: $main-width;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -167,23 +196,23 @@ header {
   }
 }
 
-.button-row {
+.center-container {
   display: flex;
-  flex-wrap: wrap; /* Ermöglicht das Umwickeln der Buttons auf kleineren Bildschirmen */
-  justify-content: space-between;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-  button {
-    flex: 1 1 auto; /* Ermöglicht den Buttons, sich gleichmäßig anzupassen */
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+.button-row {
+  width: $main-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
 
   @media (max-width: 768px) {
-    /* Anpassung für Bildschirme mit max. 768px Breite */
-    flex-direction: column; /* Stellt sicher, dass die Buttons untereinander angeordnet sind */
+    flex-direction: column;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 60px;
@@ -191,8 +220,7 @@ header {
 }
 
 .red-button {
-  flex: 1;
-  margin: 20px 100px;
+  margin: 10px 20px;
   background-color: #d50f20;
   color: white;
   border: none;
@@ -202,9 +230,15 @@ header {
   height: 55px;
   font-size: 18px;
   text-transform: uppercase;
+  text-decoration: none;
+  display: flex; /* Flexbox-Layout für das Zentrieren */
+  justify-content: center; /* Horizontales Zentrieren */
+  align-items: center; /* Vertikales Zentrieren */
 
   &:hover {
     background-color: darkred;
+    text-decoration: none; /* Entfernt die Standard-Linkunterstreichung */
+    color: white;
   }
 }
 
@@ -238,36 +272,44 @@ $text-color: black;
 
 // Cookie Banner Styling
 #cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: $banner-bg-color;
-    color: $text-color;
-    padding: 8px;
-    text-align: center;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $banner-bg-color;
+  color: $text-color;
+  padding: 8px;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    p {
-        margin: 0;
-        padding: 0;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  #cookie-btn {
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $button-hover-color;
     }
+  }
+}
 
-    #cookie-btn {
-        background-color: $button-bg-color;
-        color: $button-text-color;
-        border: none;
-        padding: 10px 20px;
-        margin-left: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 16px;
-
-        &:hover {
-            background-color: $button-hover-color;
-        }
-    }
+.responsive-image {
+  max-width: 1240px; /* Maximale Breite des Bildes */
+  width: 100%; /* Passt die Breite an den Bildschirm an */
+  height: auto; /* Erhält das Seitenverhältnis des Bildes */
+  display: block; /* Entfernt mögliche zusätzliche Abstände unter dem Bild */
+  margin: 0 auto; /* Zentriert das Bild horizontal */
 }
